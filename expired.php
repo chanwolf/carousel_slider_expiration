@@ -34,7 +34,7 @@ function custom_metabox_field(){
 
 	echo "<strong>Carousel Date</strong> <input type='text' name='carousel_date' id='carousel_date' value='".$date_val."' style='width:100%;box-sizing:border-box;padding: 12px 20px;margin: 8px 0;' />";
 
-	echo "<br><br><strong>NOTE:</strong> If the Carousel Date is left empty it will use the publish date of the post as the date on the carousel slider. If this is for an event make sure to set the expire date.";
+	echo "<br><br><strong>NOTE:</strong> If the Carousel Date is left empty it will use the publish date of the post as the date on the carousel slider. If this is for an event make sure to set the expire date for that event post.";
 }
 
 // Saves the values you entered in the metaboxes when you enter a value and update the post
@@ -130,3 +130,34 @@ function expirePost($atts){
 add_shortcode('carousel_slider', expirePost);
 ?>
 
+<?php
+/**
+Plugin Name: Footer Scripts
+*/
+add_action( 'wp_footer', 'my_footer_scripts' );
+function my_footer_scripts(){
+  ?>
+  <script>
+  	
+  	jQuery('.owl-carousel').owlCarousel({
+	    loop:true,
+	    margin:10,
+	    responsiveClass:true,
+	    responsive:{
+	        0:{
+	            items:1,
+	            nav:true
+	        },
+	        600:{
+	            items:1,
+	            nav:false
+	        },
+	        1000:{
+	            items:3,
+	            loop:false
+	        }
+    }
+})
+  </script>
+  <?php
+}
