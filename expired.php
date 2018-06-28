@@ -173,11 +173,11 @@ function my_footer_scripts(){
 	            items:1,
 	            nav:true
 	        },
-	        500:{
+	        600:{
 	            items:1,
 	            nav:false
 	        },
-	        600:{
+	        700:{
 	            items:2,
 	            nav:false
 	        },
