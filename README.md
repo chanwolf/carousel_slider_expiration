@@ -14,7 +14,7 @@ Wordpress Admin Page Installation
 2. Select plugins on the left handside toolbar
 3. Click Add New
 4. Click Upload Plugin
-5. Select the .zip file that you downloaded
+5. Select the .zip file that you downloaded and hit install now
 ```
 ### Usage Explanation
 1. To use this plugin have it activated in the Wordpress plugin. 
