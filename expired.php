@@ -2,14 +2,39 @@
 /*
  
 * Plugin Name: UCI Mind Carousel Slider
- 
+* Plugin URI:  https://github.com/chanwolf/carousel_slider_expiration/blob/master/README.md
 * Description: Creates a simple slider that pull post from a specific category. The post on the slider will dissapear
 * 				after a specified month. (attributes are category and expiration)
 * Version: 1.0
  
 * Author: Chan Sy
- 
+* Author URI:  https://github.com/chanwolf
+
+
 */
+
+function load_scripts(){
+	wp_enqueue_script(
+		'jquery',
+		'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js',
+		array(),
+		'2.2.4',
+		false
+	);
+
+
+	wp_enqueue_script(
+		'owl-carousel',
+		'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js',
+		array(),
+		'2.3.4',
+		false
+	);
+}
+
+add_action('wp_enqueue_scripts',load_scripts);
+
+
 
 /*================================ Custom Post Metabox  ================================*/
 // All the metabox functions are within this commented block
@@ -148,16 +173,23 @@ function my_footer_scripts(){
 	            items:1,
 	            nav:true
 	        },
-	        600:{
+	        500:{
 	            items:1,
+	            nav:false
+	        },
+	        600:{
+	            items:2,
 	            nav:false
 	        },
 	        1000:{
 	            items:3,
 	            loop:false
 	        }
-    }
-})
+    	}
+    })
+
+ 
   </script>
-  <?php
+<?php
 }
+?>
