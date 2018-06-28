@@ -156,7 +156,7 @@ add_shortcode('carousel_slider', expirePost);
 ?>
 
 <?php
-/**
+/*
 Plugin Name: Footer Scripts
 */
 add_action( 'wp_footer', 'my_footer_scripts' );
