@@ -5,15 +5,15 @@ Carousel Slider plugin that pulls users post and creates a slider with a default
 SFTP Route (recommend FileZilla)
 1. Download this repository and extract the .zip file
 2. SFTP to your wordpress server
-3. Navigate to **/var/www/wordpress/wp-content/plugins**
+3. Navigate to /var/www/wordpress/wp-content/plugins
 4. Copy the unziped file into the directory specified above
 ```
 ```
 Wordpress Admin Page Installation 
 1. Navigate into your Wordpress admin page
 2. Select plugins on the left handside toolbar
-3. Click **Add New**
-4. Click **Upload Plugin**
+3. Click Add New
+4. Click Upload Plugin
 5. Select the .zip file that you downloaded
 ```
 ### Usage Explanation
